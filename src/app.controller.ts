@@ -1,12 +1,24 @@
-import { Controller, Get } from '@nestjs/common';
-import { AppService } from './app.service';
+import { Get, Controller, Render, UseInterceptors } from '@nestjs/common';
+import { AppInterceptor } from './app.interceptor';
 
 @Controller()
+// @UseInterceptors(AppInterceptor)
 export class AppController {
-  constructor(private readonly appService: AppService) {}
+  @Get(['/', '/index.hbs'])
+  @Render('index')
+  getIndexPage() {
+    return { isLoggedIn: true };
+  }
 
-  @Get()
-  getHello(): string {
-    return this.appService.getHello();
+  @Get('/faq.hbs')
+  @Render('faq')
+  getReviewPage() {
+    return { isLoggedIn: true };
+  }
+
+  @Get('/auth.hbs')
+  @Render('auth')
+  getAuthPage() {
+    return { isLoggedIn: true };
   }
 }

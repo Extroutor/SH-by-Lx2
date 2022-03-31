@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  {{>head}}
+  <title>Войти | Студент Форум</title>
+</head>
+<body>
+{{>header}}
+<main>
+  <div class="intro">
+    {{#if isLoggedIn}}
+      <div class="intro-text auth-text">
+        <div class="intro-main-text auth-main-text">
+          Войди в свой аккаунт
+        </div>
+        <form class="auth-form" action="" method="">
+          <input type="text" placeholder="Введите логин">
+          <input type="password" placeholder="Введите пароль">
+          <button class="auth-button" type="submit">Войти</button>
+          <p class="non-account">
+            У тебя нет аккаунта? - <a class="auth-a" href="register.html">зарегистрируйся!
+          </a>
+          </p>
+        </form>
+      </div>
+    {{else}}
+      <div class="intro-text auth-text">
+        <div class="intro-main-text auth-main-text">
+          Зарегистрируй новый аккаунт
+        </div>
+        <form class="auth-form" action="check.php" method="post">
+          <input type="text" placeholder="Введите логин" name="login" id="login">
+          <input type="password" placeholder="Введите пароль" name="pass" id="pass">
+          <!-- <input type="password" placeholder="Подтвердите пароль" name="password" id="password"> -->
+          <button class="auth-button" type="submit">Зарегистрироваться</button>
+          <p class="non-account">
+            У тебя есть аккаунт? - <a class="auth-a" href="auth.html">войди!
+          </a>
+          </p>
+        </form>
+      </div>
+    {{/if}}
+  </div>
+</main>
+{{>footer}}
+<script src="js/script.js"></script>
+</body>
+</html>

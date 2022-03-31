@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+html {
+    background: rgb(17, 37, 100);
+}
+
+.header-wrap {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.title {
+    font-family: Montserrat;
+    font-weight: bold;
+    color: white;
+    font-size: 24px;
+    margin: 30px 0;
+
+}
+
+.title-p2 {
+    display: inline;
+    color: #8dbbda;
+}
+
+hr {
+    border-top: 1px solid rgb(255, 255, 255);
+}
+
+.header-menu {
+    margin-top: 20px;
+}
+
+.header-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 250px;
+    justify-content: space-between;
+}
+
+.header-link {
+    font-family: Montserrat;
+    font-size: 14px;
+    line-height: 22px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.header-link:hover,
+.header__link:focus,
+.header__link:hover.active {
+    opacity: .65;
+}
+
+.intro {
+    display: flex;
+    /* width: 80%; */
+    margin: 60px auto;
+}
+
+.intro-photo {
+    margin: 0 auto;
+    width: 50%;
+    box-shadow: 0px 0px 60px 10px #9ebeffbd;
+}
+
+.intro-text {
+    display: inline;
+    background: rgb(255, 255, 255);
+    padding: 0 50px;
+    box-shadow: 0px 0px 60px 10px #9ebeffbd;
+}
+
+.intro-main-text {
+    margin: 20% 0 10%;
+    font-family: Montserrat;
+    color: rgb(17, 37, 100);
+    font-weight: bold;
+    font-size: 4vw;
+    line-height: 4vw;
+}
+
+.intro-discription-text {
+    font-family: Montserrat;
+    font-size: 1.7vw;
+}
+
+/* ________________________________________________  */
+
+.select {
+    margin-top: 20%;
+    color: rgb(131, 131, 131);
+    font-size: 1.4vw;
+    border-color: rgb(107, 107, 107);
+    border-radius: 20px;
+    padding: 4px;
+}
+
+.select:hover {
+    box-shadow: 0 0 4px rgb(17, 37, 100);
+}
+
+.select:active {
+    background-color: rgba(17, 36, 100, 0.123);
+    ;
+
+}
+
+.select.active:hover,
+.select.active {
+    box-shadow: 0 0 4px rgb(204, 204, 204);
+    border-radius: 2px 2px 0 0;
+    background-color: #f8f8f8
+}
+
+/* ________________________________________________  */
+
+.arrow-1 {
+    /* display: none; */
+    cursor: pointer;
+    position: relative;
+    width: 80px;
+    height: 50px;
+    margin: 20px;
+    margin-left: 90%;
+    opacity: 0;
+}
+
+.arrow-1 div {
+    position: relative;
+    top: 20px;
+    width: 45px;
+    height: 10px;
+    background-color: rgb(17, 37, 100);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.616);
+    left: 0;
+    display: block;
+}
+
+.arrow-1 div::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 10px;
+    top: -11px;
+    right: -8px;
+    background-color: rgb(17, 37, 100);
+    transform: rotate(45deg);
+}
+
+.arrow-1 div::before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 10px;
+    top: 11px;
+    right: -8px;
+    background-color: rgb(17, 37, 100);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.418);
+    transform: rotate(-45deg);
+}
+
+.arrow-1:hover {
+    animation: arrow-1 0.5s linear infinite;
+}
+
+@keyframes arrow-1 {
+    0% {
+        left: 0;
+    }
+
+    50% {
+        left: 10px;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+.socials {
+    display: flex;
+    justify-content: space-between;
+    width: 15%;
+    margin: 150px auto 30px;
+    fill: #ffffff;
+}
+
+.little__text {
+    padding-bottom: 40px;
+    font-family: Montserrat;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.faq-intro {
+    margin-top: 70px;
+}
+
+.faq-intro {
+    background: #000;
+}
+
+.faq-photo {
+    box-shadow: 0px 0px 60px 10px #000000;
+    margin: 0 auto;
+    width: 100%;
+    opacity: 0.8;
+}
+
+.faq-intro {
+
+    position: relative;
+
+}
+
+.faq-intro-text {
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    /* text-transform: uppercase; */
+    color: white;
+    text-shadow: 1px 1px 2px rgb(68, 50, 50), 0 0 1em rgb(255, 255, 255);
+    /* Параметры тени */
+    /* width: 350px; */
+    /* background: #00000094; */
+    padding: 10px;
+    /* text-align: center; */
+    font: bold 5vw Montserrat;
+}
+
+.faqs {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 100px auto 0;
+
+}
+
+.faq-item {
+    color: #ffffff;
+    font-family: Montserrat;
+    width: 30%;
+
+}
+
+.faq-question {
+    margin-bottom: 20px;
+    font-weight: bold;
+    line-height: 24px;
+
+}
+
+.faq-answer {
+    color: #f3f3f3;
+    line-height: 20px;
+
+
+}
+
+.auth-text {
+    width: 100%;
+    padding: 0;
+
+}
+
+.auth-main-text {
+    width: 80%;
+    margin: 5% auto;
+    font-size: 2.5vw;
+}
+
+.auth-form {
+    font-family: Montserrat;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin: 5% auto;
+}
+
+input {
+    margin: 10px 0;
+    padding: 15px;
+    border: unset;
+    border-bottom: 2px solid #a5a5a5;
+    outline: none;
+}
+
+.auth-a {
+    text-decoration: none;
+    font-weight: bold;
+    color:rgb(35, 61, 145);
+}
+.auth-a:hover{
+    color:rgb(72, 96, 173);
+}
+.non-account {
+    margin: 40px 0;
+    text-align: center;
+}
+.auth-button {
+    padding: 15px;
+    width: 60%;
+    margin: 50px auto 0;
+    border-radius: 20px;
+    box-shadow: 0px 10px 14px -7px rgb(35, 61, 145);
+	background:linear-gradient(to bottom, rgb(35, 61, 145) 5%, rgb(35, 61, 145) 100%);
+	background-color:rgb(35, 61, 145);
+	border-radius:8px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family: Montserrat;
+	font-size: 1.2vw;
+	font-weight:bold;
+	text-decoration:none;
+	text-shadow:0px 1px 0px rgb(60, 83, 158);
+    text-align: center;
+}
+.auth-button:hover {
+	background:linear-gradient(to top, rgb(44, 79, 194) 5%, rgb(35, 61, 145) 100%);
+	background-color:rgb(28, 43, 92);
+}
+.auth-button:active {
+	position:relative;
+	top:1px;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  {{>head}}
+  <title>Главная | Студент Форум</title>
+</head>
+<body>
+{{>header}}
+<main>
+  <div class="intro">
+    <img class="intro-photo" src=" img/main2.jpg">
+    <div class="intro-text">
+      <div class="intro-main-text">
+        Выбери свой университет
+      </div>
+      <div class="intro-discription-text">
+        Выбери свой университет из списка и авторизируйся, <br>чтобы просматривать материалы
+      </div>
+      <form name="universeSelect">
+        <select name="universe" class="select" id="selection">
+          <option value="hide">Выбери университет</option>
+          <option value="Itmo">ИТМО</option>
+          <option value="Spbgu">СПБГУ</option>
+          <option value="Spbpu">СПБПУ</option>
+          <option value="2013">СБПГЭУ</option>
+          <option value="2014">СПБГУП</option>
+        </select>
+      </form>
+      <a href="auth.hbs">
+        <div class="arrow-1" id="arrow">
+          <div></div>
+        </div>
+      </a>
+    </div>
+  </div>
+</main>
+{{>footer}}
+<script src="js/script.js"></script>
+</body>
+</html>
