@@ -2,7 +2,7 @@ import { Get, Controller, Render, UseInterceptors } from '@nestjs/common';
 import { AppInterceptor } from './app.interceptor';
 
 @Controller()
-// @UseInterceptors(AppInterceptor)
+@UseInterceptors(AppInterceptor)
 export class AppController {
   @Get(['/', '/index.hbs'])
   @Render('index')
