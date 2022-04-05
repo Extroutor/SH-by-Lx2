@@ -1,0 +1,85 @@
+<main>
+  <div class="intro">
+    <p class="intro__name-text">Price</p>
+    <p class="intro__year-text">2021</p>
+  </div>
+  <p class="articles__price">Средняя стоимость услуг</p>
+  <selection class="table wow animate__animated animate__zoomIn">
+    <div class="grid">
+      <div class="box box__title">Название</div>
+      <div class="box">Одностраничный сайт</div>
+      <div class="box">Многостраничный сайт</div>
+      <div class="box">Цена</div>
+      <div class="box">15 000 рублей</div>
+      <div class="box">30 000 рублей</div>
+      <div class="box">Время</div>
+      <div class="box">1-2 дня</div>
+      <div class="box">до 7 дней</div>
+    </div>
+  </selection>
+  <div class="discount">
+    <p class="discount__title-text">Посчитать личную скидку</p>
+    <div class="checkpoints">
+      <section class="app">
+        <article>
+          <input type="checkbox" class="feature-1" id="feature1"/>
+          <div>
+                        <span>
+                          Многостраничный<br/>
+                          сайт
+                        </span>
+          </div>
+        </article>
+
+        <article>
+          <input type="checkbox" class="feature-2" id="feature2"/>
+          <div>
+                        <span>
+                          Одностраничный<br/>
+                          сайт
+                        </span>
+          </div>
+        </article>
+
+        <article>
+          <input type="checkbox" class="feature-3" id="feature3"/>
+          <div>
+                        <span>
+                          Собственный<br/>
+                          дизайн
+                        </span>
+          </div>
+        </article>
+
+        <article>
+          <input type="checkbox" class="feature-4" id="feature4"/>
+          <div>
+                        <span>
+                          Наш<br/>
+                          дизайн
+                        </span>
+          </div>
+        </article>
+
+      </section>
+    </div>
+    <button class="button"/>Посчитать</button>
+    <div class="total__price"></div>
+  </div>
+  <div id="main_card">
+    <button id="add-card">Показать отзыв</button>
+    <div id="cards">
+      <div id="preloader" class="card preloader disabled">
+        <img class="preloader-img" src="imgs/preloader.gif">
+      </div>
+    </div>
+    <template id="one-card">
+      <div class="card">
+        <h2></h2>
+        <hr style="border-color: rgb(0, 0, 0);">
+        <div class="card-body" id="card-body"></div>
+      </div>
+    </template>
+
+  </div>
+</main>
