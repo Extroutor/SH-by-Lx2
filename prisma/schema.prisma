@@ -13,10 +13,10 @@ model User {
   id    Int     @default(autoincrement()) @id
   email String  @unique
   name  String?
-  posts Post[]
+  posts Posts[]
 }
 
-model Post {
+model Posts {
   id        Int      @default(autoincrement()) @id
   title     String
   content   String?
