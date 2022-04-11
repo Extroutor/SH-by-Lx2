@@ -12,10 +12,10 @@ async function bootstrap() {
   app.setBaseViewsDir(join(__dirname, '..', 'views'));
   hbs.registerPartials(join(__dirname, '..', 'views/partials'));
   const config = new DocumentBuilder()
-    .setTitle('Articles API')
-    .setDescription('An API for Articles')
+    .setTitle('Posts API')
+    .setDescription('An API for Posts')
     .setVersion('0.1')
-    .addTag('Article')
+    .addTag('Posts')
     .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api', app, document);
