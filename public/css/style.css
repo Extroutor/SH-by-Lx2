@@ -327,3 +327,14 @@ input {
 	position:relative;
 	top:1px;
 }
+
+.loadTime{
+    display: block;
+    max-width: 20%;
+    margin: 0 auto 30px;
+    text-align: center;
+    font-size: 13px;
+    font-family: Montserrat;
+    line-height: 1.5;
+    color: #ffffff;
+}
