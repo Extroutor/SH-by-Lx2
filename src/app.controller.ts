@@ -15,7 +15,7 @@ import { PostService } from './post.service';
 import { User as UserModel, Post as PostModel } from '@prisma/client';
 
 @Controller()
-// @UseInterceptors(AppInterceptor)
+@UseInterceptors(AppInterceptor)
 export class AppController {
   @Get(['/', '/index.hbs'])
   @Render('index')
