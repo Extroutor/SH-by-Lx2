@@ -34,7 +34,7 @@ hr {
 .header-list {
     display: flex;
     flex-wrap: wrap;
-    width: 250px;
+    width: 300px;
     justify-content: space-between;
 }
 

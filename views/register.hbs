@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  {{>head}}
+  <title>Войти | Студент Форум</title>
+</head>
+<body>
+{{>header}}
+<main>
+  <div class="intro">
+      <div class="intro-text auth-text">
+        <div class="intro-main-text auth-main-text">
+          Зарегистрируй новый аккаунт
+        </div>
+        <form class="auth-form">
+          <input type="text" placeholder="Введите логин" name="login" id="login">
+          <input type="password" placeholder="Введите пароль" name="password" id="password">
+          <!-- <input type="password" placeholder="Подтвердите пароль" name="password" id="password"> -->
+          <button class="auth-button" id="createUserButton" onclick="createUser()" type="submit">Зарегистрироваться</button>
+          <p class="non-account">
+            У тебя есть аккаунт? - <a class="auth-a" href="auth.hbs">войди!
+          </a>
+          </p>
+        </form>
+      </div>
+  </div>
+  <div class="intro">
+    <div class="intro-text auth-text">
+      <div class="intro-main-text auth-main-text">
+        Создай свой пост
+      </div>
+      <form class="auth-form">
+        <input type="text" placeholder="Введите название" name="text" id="title">
+        <input type="text" placeholder="Введите текст" name="text" id="text">
+        <button class="auth-button" id="createPostButton" onclick="createPost()" type="submit">Добавить</button>
+      </form>
+    </div>
+  </div>
+</main>
+{{>footer serverTime = serverTime}}
+</body>
+</html>

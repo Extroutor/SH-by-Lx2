@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  {{>head}}
+  <title>Создай пост | Студент Форум</title>
+</head>
+<body>
+{{>header}}
+<main>
+  <div class="intro">
+    <div class="intro-text auth-text">
+      <div class="intro-main-text auth-main-text">
+        Создай свой пост
+      </div>
+      <form class="auth-form">
+        <input type="text" placeholder="Введите название" name="text" id="title">
+        <input type="text" placeholder="Введите текст" name="text" id="text">
+        <button class="auth-button" id="createPostButton" onclick="createPost()" type="submit">Добавить</button>
+      </form>
+    </div>
+  </div>
+</main>
+{{>footer serverTime = serverTime}}
+</body>
+</html>

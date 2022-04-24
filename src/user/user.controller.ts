@@ -1,7 +1,8 @@
-import { Get, Post, Delete, Param, Controller } from '@nestjs/common';
+import { Get, Post, Delete, Param, Controller, Body } from '@nestjs/common';
 import { ApiOperation, ApiResponse } from '@nestjs/swagger';
 import { User } from '@prisma/client';
 import { UserService } from './user.service';
+import { UserDto } from './dto/user-dto';
 
 @ApiResponse({
   status: 501,
@@ -11,22 +12,51 @@ import { UserService } from './user.service';
 export class UserController {
   constructor(private readonly userService: UserService) {}
 
-  @ApiOperation({ summary: 'Finding a user by ID and name' })
-  @Get(':user')
-  async getUser(@Param('User id') id: number, username: string): Promise<User> {
-    return await this.userService.findUser(id, username);
-  }
-
+  //////////CREATE USER////////////////////////////////////////////////////////////////////////
+  @ApiOperation({
+    summary: 'Create user',
+  })
+  @ApiResponse({
+    status: 201,
+    description: 'User Created!',
+  })
   @Post('create')
-  async createUser(email: string, username: string): Promise<User> {
-    return await this.userService.createUser(email, username);
+  async createUser(@Body() CreateUserDto: UserDto): Promise<User> {
+    return await this.userService.createUser(CreateUserDto);
   }
 
-  @Delete(':user/delete')
-  async deleteUser(
-    @Param('User id') id: number,
-    username: string,
-  ): Promise<User> {
-    return await this.userService.deleteUser(id, username);
+  //////////GET USERS////////////////////////////////////////////////////////////////////////
+  @ApiOperation({
+    summary: 'Get All Users',
+  })
+  @Get()
+  async getUsers(): Promise<User[]> {
+    return await this.userService.getUsers();
+  }
+
+  //////////GET USER by ID////////////////////////////////////////////////////////////////////////
+  @ApiOperation({
+    summary: 'Get user by ID',
+  })
+  @ApiResponse({
+    status: 400,
+    description: 'Invlaid ID format',
+  })
+  @Get(':id')
+  async getUser(@Param('id') id: number): Promise<User> {
+    return await this.userService.getUser(id);
+  }
+
+  //////////DELETE USER////////////////////////////////////////////////////////////////////////
+  @ApiOperation({
+    summary: 'Delete user by ID',
+  })
+  @ApiResponse({
+    status: 400,
+    description: 'Invalid ID format',
+  })
+  @Delete(':id/delete')
+  async deleteUser(@Param('id') id: number): Promise<void> {
+    return await this.userService.deleteUser(id);
   }
 }
